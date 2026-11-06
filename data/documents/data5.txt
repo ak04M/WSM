@@ -1,0 +1,13 @@
+Search Engines, Ranking, and Relevance
+
+A search engine has to deal with a large collection of documents and a large number of user queries. Indexing makes retrieval efficient by allowing the system to locate documents containing a query term without scanning every document.
+
+Retrieval and ranking are related but different tasks. Retrieval determines which documents satisfy the query, while ranking determines the order in which retrieved documents should be presented to the user.
+
+Term frequency measures how often a term occurs in a document. Inverse document frequency gives more importance to terms that occur in fewer documents in the collection. The combination of term frequency and inverse document frequency is commonly called tf-idf.
+
+A term that appears in almost every document may be less useful for distinguishing relevant documents. A term that appears in only a small number of documents can provide more information about which documents are relevant.
+
+The vector space model represents documents and queries using term weights. Similarity measures can then be used to compare a query with documents. These scoring methods can improve search results when a simple Boolean match is not enough.
+
+Even when ranking is used, the inverted index remains important because it provides the candidate documents and term information needed during query processing.

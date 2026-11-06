@@ -1,0 +1,11 @@
+Wildcard Queries and Tolerant Retrieval
+
+Users do not always know the exact spelling or complete form of a word. Wildcard queries allow a search system to match multiple vocabulary terms. The asterisk character can represent an unknown sequence of characters.
+
+A trailing wildcard such as comput* can match terms such as computer, computing, computation, and computational if those terms exist in the dictionary. Wildcards can also occur inside a term. For example, comp*er can represent a pattern whose middle portion is unknown.
+
+A search system can process a wildcard query by first finding all dictionary terms that match the wildcard pattern. The postings lists for the matching terms are then retrieved and combined to obtain the final document set.
+
+A Permuterm Index is one method for processing wildcard queries. A special symbol such as $ is added to a term, and all rotations of the resulting string are stored in a permuterm dictionary. This allows wildcard patterns to be transformed into prefix-style searches.
+
+Other tolerant retrieval techniques include n-gram indexes and spelling correction. Edit distance can be used to measure how many insertions, deletions, or substitutions are required to transform one term into another.

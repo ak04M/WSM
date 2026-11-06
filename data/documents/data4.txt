@@ -1,0 +1,13 @@
+Boolean Query Processing and Postings Lists
+
+Boolean retrieval represents a query as a combination of terms and Boolean operators. The most common operators are AND, OR, and NOT. The result of a Boolean query is a set of documents that satisfy the logical condition.
+
+For an AND operation, both terms must occur in the document. If information has postings [1, 2, 4, 7] and retrieval has postings [2, 4, 6, 7], their intersection is [2, 4, 7].
+
+For an OR operation, a document containing either term is acceptable. The union of [1, 2, 4] and [2, 3, 5] is [1, 2, 3, 4, 5].
+
+The NOT operator removes documents containing a particular term from the current result. Boolean processing is therefore based on set operations over postings lists.
+
+Sorted postings lists make Boolean query processing efficient. An intersection can be performed by comparing the current document identifiers from two lists and advancing the pointer with the smaller identifier. This avoids scanning every document repeatedly.
+
+A query processor must tokenize and normalize the user's query before looking up terms in the inverted index. It can then perform Boolean operations and return the matching document identifiers.

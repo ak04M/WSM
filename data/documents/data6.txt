@@ -1,0 +1,11 @@
+Index Compression and Efficient Storage
+
+Search indexes can become very large when they contain millions of documents and a large vocabulary. Index compression reduces the amount of storage required for dictionaries and postings lists.
+
+A postings list contains document identifiers, and these identifiers can often be stored efficiently using techniques such as gap encoding. Instead of storing consecutive document identifiers directly, the system can store differences between neighboring identifiers.
+
+Compression reduces disk space and can also reduce the amount of data transferred from disk during query processing. However, compressed data must be decoded before or during retrieval, so there is a tradeoff between storage efficiency and processing speed.
+
+The dictionary is often kept in memory because query processing needs frequent access to vocabulary terms. Postings data may be stored on disk or in compressed structures depending on the size and design of the search system.
+
+Efficient storage is especially important in web search because search engines maintain indexes for very large document collections. Index construction, compression, caching, and efficient query processing all contribute to the performance of the system.

@@ -1,0 +1,9 @@
+Information Retrieval and Web Search
+
+Information retrieval is the process of finding relevant information from a collection of documents. A search engine receives a user query and attempts to return documents that satisfy the information need. Modern web search systems use indexing, query processing, scoring, and ranking to make search efficient.
+
+An inverted index is a central data structure in information retrieval. Instead of storing a complete term-document matrix, the system stores a dictionary of terms and a postings list for each term. The postings list contains the document identifiers in which the term occurs.
+
+For example, if the term retrieval occurs in documents 1, 3, and 5, its postings list can be represented as [1, 3, 5]. This representation is efficient because a large document collection usually contains many terms but each individual document contains only a small fraction of the complete vocabulary.
+
+A search query is processed using the index. Boolean operators such as AND, OR, and NOT can combine terms. A query such as information AND retrieval asks for documents containing both terms. Query processing therefore depends heavily on efficient postings list operations.

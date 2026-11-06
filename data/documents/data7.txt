@@ -1,0 +1,11 @@
+Web Search and Large Scale Indexing
+
+Web search systems operate on a very large and continuously changing collection of web pages. A search engine must discover pages, process their contents, construct indexes, and answer queries efficiently.
+
+Documents can be divided into groups and processed by multiple machines. Distributed indexing allows different parts of a collection to be parsed and indexed in parallel. The resulting partial indexes can then be merged or organized by term ranges.
+
+Dynamic indexing is useful because web collections change over time. New documents may be added, existing documents may change, and documents may disappear. A search system therefore needs methods for updating its index without rebuilding everything from the beginning.
+
+Secure documents and access control can also affect search. A system should not return a document to a user who does not have permission to access it.
+
+Caching can improve response time by storing frequently requested information. Search engines can cache query results or other frequently used data so that repeated requests do not always require the same computation.

@@ -1,0 +1,11 @@
+Information Search Example Collection
+
+A student searching for information retrieval may submit queries such as information AND search, retrieval AND index, or search OR engine. The search system first processes the query and then uses the inverted index to identify matching documents.
+
+Consider a collection containing documents about indexing, wildcard queries, Boolean retrieval, ranking, compression, and web search. A query for wildcard can retrieve documents discussing wildcard processing and tolerant retrieval. A query for compression can retrieve documents explaining compressed postings and efficient index storage.
+
+A query such as search AND index requires both terms to occur in the same document. A query such as ranking OR compression returns documents containing either ranking or compression. More complex Boolean expressions can combine several terms.
+
+Wildcard queries can make searching more flexible. Queries such as retriev* can match retrieval and retrieve-related vocabulary terms if they are present in the dictionary. Queries such as index* can match index, indexing, and indexed terms when those terms exist.
+
+The purpose of this collection is to provide enough repeated vocabulary for testing document loading, tokenization, normalization, inverted index construction, Boolean query processing, and wildcard processing in a small search application.

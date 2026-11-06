@@ -1,0 +1,11 @@
+Index Construction and Document Processing
+
+Building an information retrieval system begins with a collection of documents. Each document is loaded and assigned a unique document identifier. The text is then tokenized into individual terms before the terms are normalized.
+
+Tokenization separates a stream of characters into tokens. Punctuation, whitespace, and other delimiters can influence token boundaries. After tokenization, normalization can be applied to make equivalent forms match during search.
+
+Case folding is a simple normalization technique. Words such as Search, SEARCH, and search can be converted into the same lowercase representation. This prevents unnecessary differences between words that have the same meaning for a basic search system.
+
+The normalized terms are inserted into an inverted index. The index contains a dictionary and postings lists. The dictionary stores the vocabulary of the collection, while each vocabulary term points to a postings list containing document identifiers.
+
+Efficient index construction is important for large collections. When the collection is too large to process entirely in memory, indexing systems can use sorting, merging, distributed processing, and other techniques. The goal is to construct an index that supports fast query processing.
